@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Pitchfight - Hyper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       html, body {
         height: 100%;
@@ -14,9 +15,31 @@
       body img {
         max-width: 100%;
       }
+
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        display: block;
+      }
+
+      @media only screen and (max-width: 500px) {
+        .mobile {
+          display: block;
+        }
+        .desktop {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
-    <img src="assets/rules.png"/>
+    <div class="desktop">
+      <img src="assets/rules.png"/>
+    </div>
+    <div class="mobile">
+      <img src="assets/mobile-fight.png"/>
+      <img src="assets/mobile-rules.png"/>
+    </div>
   </body>
 </html>
